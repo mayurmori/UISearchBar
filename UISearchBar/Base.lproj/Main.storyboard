@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dGk-eT-fzD">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FJQ-3c-zCu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="dGk-eT-fzD" customClass="ViewController" customModule="UISearchBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zcX-2J-2qm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eZc-2J-cQI">
+                                <rect key="frame" x="0.0" y="20" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QVg-Aq-S3K" customClass="TableView" customModule="UISearchBar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="76" width="414" height="660"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eZc-2J-cQI" firstAttribute="trailing" secondItem="LuA-Vc-Dhw" secondAttribute="trailing" id="2EF-Pu-eh8"/>
+                            <constraint firstItem="eZc-2J-cQI" firstAttribute="top" secondItem="LuA-Vc-Dhw" secondAttribute="top" id="38b-OI-8o4"/>
+                            <constraint firstItem="LuA-Vc-Dhw" firstAttribute="bottom" secondItem="QVg-Aq-S3K" secondAttribute="bottom" id="605-fq-znT"/>
+                            <constraint firstItem="QVg-Aq-S3K" firstAttribute="top" secondItem="eZc-2J-cQI" secondAttribute="bottom" id="88Q-9y-TtY"/>
+                            <constraint firstItem="QVg-Aq-S3K" firstAttribute="leading" secondItem="LuA-Vc-Dhw" secondAttribute="leading" id="Sq3-mZ-sHg"/>
+                            <constraint firstItem="LuA-Vc-Dhw" firstAttribute="trailing" secondItem="QVg-Aq-S3K" secondAttribute="trailing" id="frf-Ds-jLZ"/>
+                            <constraint firstItem="eZc-2J-cQI" firstAttribute="leading" secondItem="LuA-Vc-Dhw" secondAttribute="leading" id="nzE-Sf-EWL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LuA-Vc-Dhw"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="eZc-2J-cQI" id="ed3-ue-azN"/>
+                        <outlet property="tblView" destination="QVg-Aq-S3K" id="a0Z-ih-UkV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbc-UL-ri6" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
